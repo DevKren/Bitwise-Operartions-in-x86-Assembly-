@@ -1,18 +1,4 @@
-# Read the following instructions carefully
-# You will provide your solution to this part of the project by
-# editing the collection of functions in this source file.
-#
-# Some rules from Project 2 are still in effect for your assembly code here:
-#  1. No global variables are allowed
-#  2. You may not define or call any additional functions in this file
-#  3. You may not use any floating-point assembly instructions
-# You may assume that your machine:
-#  1. Uses two's complement, 32-bit representations of integers.
 
-# isZero - returns 1 if x == 0, and 0 otherwise
-#   Argument 1: x
-#   Examples: isZero(5) = 0, isZero(0) = 1
-#   Rating: 1
 .global isZero
 isZero:
     cmpl $0, %edi 
@@ -24,11 +10,7 @@ is_zero:
     ret
 
 
-# bitNor - ~(x|y)
-#   Argument 1: x
-#   Argument 2: y
-#   Example: bitNor(0x6, 0x5) = 0xFFFFFFF8
-#   Rating: 1
+
 .global bitNor
 bitNor:
     movl %edi, %eax
@@ -39,10 +21,7 @@ bitNor:
     
     
 
-# distinctNegation - returns 1 if x != -x.
-#     and 0 otherwise
-#   Argument 1: x
-#   Rating: 2
+
 .global distinctNegation
 distinctNegation:
    cmpl %edi, %eax 
